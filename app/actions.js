@@ -17,6 +17,7 @@ export function resultsFetchDataSuccess(results) {
     };
 }
 
+// redux-thunk usage for making async call to the API
 export function resultsFetchData(url) {
     return (dispatch) => {
         dispatch(resultsIsLoading(true));

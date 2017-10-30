@@ -31,4 +31,22 @@ body {
   .loading {
     font-size: 35px;
   }
+
+  .results {
+    list-style: none;
+    padding: 0;
+    margin: 50px auto;
+    width: 60%;
+
+    li {
+      border: 1px solid #bebebe;
+      padding: 15px 0;
+      font-size: 20px;
+
+      span {
+        color: #ff6347;
+        font-weight: bold;
+      }
+    }
+  }
 }

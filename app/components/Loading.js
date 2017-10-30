@@ -12,17 +12,18 @@ export default class Loading extends Component {
 
   componentDidMount() {
     var stopper = `${this.props.text}...`;
+
     this.interval = window.setInterval(() => {
       if (this.state.text === stopper) {
-        this.setState(function() {
+        this.setState(() => {
           return { text: this.props.text }
         });
       } else {
-        this.setState(function(prevState) {
+        this.setState((prevState) => {
           return { text: `${prevState.text}.` }
         });
       }
-    }, this.props.speed);
+    }, 300);
   }
 
   componentWillUnmount() {
@@ -39,11 +40,9 @@ export default class Loading extends Component {
 }
 
 Loading.propTypes = {
-  text: PropTypes.string.isRequired,
-  speed: PropTypes.number.isRequired
+  text: PropTypes.string.isRequired
 }
 
 Loading.defaultProps = {
-  text: 'Loading',
-  speed: 300
+  text: 'Loading'
 }
