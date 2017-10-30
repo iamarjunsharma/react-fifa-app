@@ -5,4 +5,26 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+
+  form {
+    .input {
+      width: 40%;
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    .submit-btn {
+      font-size: 16px;
+      background-color: #3cb371;
+      color: #fff;
+      border: 0;
+      border-radius: 5px;
+      text-transform: uppercase;
+      padding: 14px 30px;
+      cursor: pointer;
+    }
+  }
 }
